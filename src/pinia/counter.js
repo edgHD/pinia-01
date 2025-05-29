@@ -23,6 +23,6 @@ export const counterStore = defineStore("counter", {
         return 100;
       }
       return doubleCount;
-    }
+    },
   },
 });
