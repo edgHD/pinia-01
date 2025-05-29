@@ -17,9 +17,16 @@ section {
   margin: 2rem auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   padding: 1rem;
+  background-image: url('https://cdn.chengpeiquan.com/img/2022/04/20220405012555.png?x-oss-process=image/interlace,1');
+  background-size: 2.5rem;
+  background-color: #a4fff0;
 }
 
 h2 {
   text-align: center;
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+  -webkit-text-stroke: 1px black;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <h3>{{ counter.count }}</h3>
+    <h3>{{ counter.normalizedCount }}</h3>
 </template>
 <script>
 import { counterStore } from '../pinia/counter.js';
@@ -16,6 +16,8 @@ export default {
 h3 {
     text-align: center;
     font-size: 2em;
-    color: #333;
+    font-weight: 900;
+    color: yellow;
+    -webkit-text-stroke: 2px black;
 }
 </style>
