@@ -1,14 +1,14 @@
 <template>
-    <h3>{{ counter.normalizedCount }}</h3>
+    <h3>{{ normalizedCount }}</h3>
 </template>
 <script>
 import { counterStore } from '../pinia/counter.js';
+import { mapState } from 'pinia';
 
 export default {
-    setup() {
-        const counter = counterStore();
-        return { counter };
-    },
+        computed: {
+        ...mapState(counterStore, ['normalizedCount'])
+    }
 };
 </script>
 

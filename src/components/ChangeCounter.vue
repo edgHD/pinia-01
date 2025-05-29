@@ -1,18 +1,19 @@
 <template>
     <div class="container">
-        <button class="increment" @click="counter.increment()">Add 1</button>
-        <button class="decrement" @click="counter.decrement()">Subtract 1</button>
+        <button class="increment" @click="increment()">Add 1</button>
+        <button class="decrement" @click="decrement()">Subtract 1</button>
 
     </div>
 </template>
 
 <script>
 import { counterStore } from '../pinia/counter.js';
+import { mapActions } from 'pinia';
+
 export default {
-    setup() {
-        const counter = counterStore();
-        return { counter };
-    },
+    methods: {
+        ...mapActions(counterStore, ['increment', 'decrement'])
+    }
 };
 </script>
 
@@ -23,6 +24,7 @@ export default {
     align-items: center;
     flex-direction: row;
 }
+
 .increment {
     background-color: #4CAF50;
     /* Green */
